@@ -1,0 +1,34 @@
+
+<body>
+    <table id="table_id" border="1">
+        <tbody>
+            <tr>
+                <td>0 - 0</td><td>0 - 1</td><td>0 - 2</td>
+            </tr>
+            <tr>
+                <td>1 - 0</td><td>1 - 1</td><td>1 - 2</td>
+            </tr>
+            <tr>
+                <td>2 - 0</td><td>2 - 1</td><td>2 - 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <form name="form1">
+        
+        <p>Номер строки:<br><input type="number" name="i_number"></p>
+        <p>Номер столбца:<br><input type="number" name="j_number"></p>
+        <input type="button" value="Delete by index" onclick="deleteCellById()">
+    </form>
+    </body>
+    <script>
+
+        
+
+    function deleteCellById(){
+        var table = document.getElementById("table_id");
+        var form = document.forms.form1; 
+        var rows = table.getElementsByTagName("tr");
+        row = rows.item(form.i_number.value);
+        row.deleteCell(form.j_number.value);
+    }
+    </script>

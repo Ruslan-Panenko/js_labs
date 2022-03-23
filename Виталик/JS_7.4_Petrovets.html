@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Вариант 16</title>
+<head> 
+ <script>
+var period = 0;
+function changeElement() {
+ period++;
+ document.getElementById("counter").innerText = period;
+}
+ </script>
+ </head>
+ <body
+ onload="myInt = setInterval('changeElement()',1000);"
+ onunload="clearInterval(myInt);"
+ >
+<h1>16 Вариант</h1>
+Вы здесь уже 
+<text id=counter style="position:relative" > 0 </text>,25 сек. Нравится?
+ </body>
+</html>

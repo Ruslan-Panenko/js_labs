@@ -1,0 +1,32 @@
+
+<body>
+    <table id="table_id" border="1">
+        <tbody>
+            <tr>
+                <td>0 - 0</td><td>0 - 1</td><td>0 - 2</td>
+            </tr>
+            <tr>
+                <td>1 - 0</td><td>1 - 1</td><td>1 - 2</td>
+            </tr>
+            <tr>
+                <td>2 - 0</td><td>2 - 1</td><td>2 - 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="changeText()">Change text</button>
+    </body>
+    <script>
+
+        
+
+    function changeText(){
+        var stringarr = ['Строка1','Строка2','Строка3'];
+        var table = document.getElementById("table_id");
+      
+        var cells = table.getElementsByTagName("td");
+        
+        for(i=0;i<cells.length;i++){
+            cells[i].innerHTML=stringarr[Math.floor(Math.random()*stringarr.length)];
+        }
+    }
+    </script>

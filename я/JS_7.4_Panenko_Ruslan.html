@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Вариант 15</title>
+<style>
+    #counter:hover{
+        text-decoration: underline;
+    }
+</style>
+<head> 
+ <script>
+var period = 0;
+function changeElement() {
+ period++;
+ document.getElementById("counter").innerText = period;
+}
+ </script>
+ </head>
+ <body
+ onload="myInt = setInterval('changeElement()',1000);"
+ onunload="clearInterval(myInt);"
+ >
+<h1>15 Вариант</h1>
+Вы здесь уже 
+<text id=counter style="position:relative" onmouseover = "" onmouseout = "this.style.color = 'black'"> 0 </text>,25 сек. Нравится страница?
+ </body>
+</html>

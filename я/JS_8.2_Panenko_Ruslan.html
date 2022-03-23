@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <ol id="ol">
+
+    </ol>
+
+    <button onclick="add()">Добавить</button>
+
+
+    <script>
+        function add(){
+            let liThird = document.createElement('li');
+            liThird.innerHTML = 'Third';
+            ol.prepend(liThird);
+            let liSecond = document.createElement('li');
+            liSecond.innerHTML = 'Second';
+            ol.prepend(liSecond); 
+            let liFirst = document.createElement('li');
+            liFirst.innerHTML = 'First';
+            ol.prepend(liFirst);
+            liFirst.className = 'b'
+            liSecond.className = 'b'
+            liThird.className = 'b'
+        }
+
+    </script>
+</body>
+</html>

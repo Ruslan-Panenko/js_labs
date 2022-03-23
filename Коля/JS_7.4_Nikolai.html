@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Вариант 11</title>
+<style>
+    #counter:hover{
+        color: white;
+        background: black;
+    }
+</style>
+<head> 
+ <script>
+function changeElement() {
+    var now = new Date().toLocaleString()
+    document.getElementById("counter").innerText = now;
+}
+ </script>
+ </head>
+ <body
+ onload="myInt = setInterval('changeElement()',1000);"
+ onunload="clearInterval(myInt);"
+ >
+<h1>11 Вариант</h1>
+Сегодня
+<text id=counter style="position:relative" > </text>
+</body>
+</html>

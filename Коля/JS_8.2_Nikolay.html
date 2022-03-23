@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stl{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <button onclick="add()">Добавить</button>
+
+
+    <script>
+        function add(){
+            liFirst = document.createElement('li')
+            liFirst.innerHTML = 'First'
+            ul.insertBefore(liFirst, ul.children[1])
+            liSecond = document.createElement('li')
+            liSecond.innerHTML = 'Second'
+            ul.insertBefore(liSecond, ul.children[2])
+
+            liFirst.className = 'stl'
+            liSecond.className = 'stl'
+        }
+
+    </script>
+
+</body>
+</html>
