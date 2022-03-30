@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Вариант 10</title>
+<style>
+    #counter:hover{
+        color: rgb(245, 255, 99);
+        background: rgb(0, 132, 255);
+    }
+</style>
+<head> 
+ <script>
+    function changeElement() {
+            var now = new Date()
+            var time = now.getDate()+ '.'+(now.getMonth()+1)+'.'+now.getFullYear()+'г '+ now.getHours() + ':' + now.getMinutes() + ":" + now.getSeconds()
+            document.getElementById("counter").innerText = time;
+}
+ </script>
+ </head>
+ <body
+ onload="myInt = setInterval('changeElement()',1000);"
+ onunload="clearInterval(myInt);"
+ >
+<h1>10 Вариант</h1>
+Сегодня
+<text id=counter style="position:relative" > </text> день для посещения моей страницы!
+</body>
+</html>
