@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Вариант 13</title>
+<style>
+    .qwe:hover{
+        font-style: italic;
+    }
+</style>
+<head> 
+ <script>
+var period = 0;
+function changeElement() {
+ period++;
+ document.getElementById("counter").innerText = period;
+}
+ </script>
+ </head>
+ <body
+ onload="myInt = setInterval('changeElement()',1000);"
+ onunload="clearInterval(myInt);"
+ >
+<h1>13 Вариант</h1>
+Вы здесь уже
+
+<span class="qwe"><text id=counter style="position:relative"  "> 0 </text>,25 сек.</span> Нравится страница?
+</body>
+</html>
