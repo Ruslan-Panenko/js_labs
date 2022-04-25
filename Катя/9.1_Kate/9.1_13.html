@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+#animate1 {
+  position: absolute;
+  height: 25%;
+  left:30%;
+}
+#animate2 {
+    position: absolute; 
+    height: 25%;
+    left:30%;
+    
+}
+#container{
+    position: absolute;
+    left:65%;
+    top:80%;
+    font-size: x-large;
+}
+</style>
+<body onload="animation1()">
+
+
+
+
+  <img src="field1.png" id ="animate1">
+  <img src="field2.png" id ="animate2">
+  <div id ="container"></div>  
+<script>
+function animation1(){
+  
+  let id = null;
+  const elem1 = document.getElementById("animate1");
+  const elem2 = document.getElementById("animate2");   
+  text = document.getElementById('container')   
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame1, 5);
+  function frame1() {
+    if (pos == 25) {
+      clearInterval(id);
+      
+      text.innerHTML = '<a href="javascript:window.location.reload(true)"> Welcome </a>'
+    } else {
+      pos++; 
+      elem1.style.top = pos + "%"; 
+      elem2.style.bottom = pos + "%";
+     
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

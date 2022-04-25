@@ -1,0 +1,37 @@
+
+<body>
+    <table id="table_id" border="1">
+        <tbody>
+            <tr>
+                <td>0 - 0</td><td>0 - 1</td><td>0 - 2</td>
+            </tr>
+            <tr>
+                <td>1 - 0</td><td>1 - 1</td><td>1 - 2</td>
+            </tr>
+            <tr>
+                <td>2 - 0</td><td>2 - 1</td><td>2 - 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var table = document.getElementById("table_id");
+        var rows = table.getElementsByTagName('tr');    
+        for (var i=0;i<rows.length; i++){
+            row = rows.item(i);
+            console.log(row);
+        }
+            for(var i = 0; i<rows.length;i++){
+                row = rows.item(i)
+                for(var j=0; j<rows.length; j++){
+                var cells = row.getElementsByTagName('td');
+                cells[j].setAttribute('onmouseover','change();');
+                cells[j].setAttribute('onmouseout','this.style.fontSize="16px";');
+                }
+
+            }
+        function change(){
+            el = event.target;
+            el.style.fontSize = '14px';
+        }
+        </script>
+    </body>

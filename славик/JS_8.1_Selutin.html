@@ -25,6 +25,7 @@
         var rows = table.getElementsByTagName("tr");
         var row = rows.item(rows.length-1);
         var cells = row.getElementsByTagName('td');
+        console.log(cell)
         for(var i=0;i<cells.length;i++){
             cells[i].style.backgroundColor = colorarr[Math.floor(Math.random()*colorarr.length)];
         }
